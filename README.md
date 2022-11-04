@@ -67,4 +67,21 @@ A few invaluable resources for contextualization of this material and how it fit
  - [@domchell](https://twitter.com/domchell) - implementation of [Farmer](https://github.com/mdsecactivebreach/Farmer) and [explanation](https://www.mdsec.co.uk/2021/02/farming-for-red-teams-harvesting-netntlm/)
  - [@elad_shamir](https://twitter.com/elad_shamir) - thorough [explanations of abusing RBCD](https://shenaniganslabs.io/2019/01/28/Wagging-the-Dog.html) in [multiple scenarios](https://eladshamir.com/2019/08/08/Lock-Screen-LPE.html), and [shadow credentials](https://posts.specterops.io/shadow-credentials-abusing-key-trust-account-mapping-for-takeover-8ee1a53566ab) 
  - [@tifkin_](https://twitter.com/tifkin_) & [@topotam77](https://twitter.com/topotam77) - NTLM authentication coercion methods
- - [@skelsec](https://twitter.com/skelsec?lang=en) - [msldap](https://github.com/skelsec/msldap) w/ support for channel binding 
+ - [@skelsec](https://twitter.com/skelsec?lang=en) - [msldap](https://github.com/skelsec/msldap) w/ support for channel binding
+
+
+## Docker File:
+
+```
+docker build . -t ldaprealyscan
+```
+
+running
+```
+docker run -ti ldaprealayscan bash
+```
+once in the new shell
+```
+python3.9 LdapRelayScan.py -method LDAPS -dc-ip <DCIP> -u aaaa
+[Using the Name AAA is better the guest because guest gets locked out alot.]
+```
