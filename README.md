@@ -1,3 +1,19 @@
+## Docker File:
+
+```
+docker build . -t ldaprealyscan
+```
+
+running
+```
+docker run -ti ldaprealayscan bash
+```
+once in the new shell
+```
+python3.9 LdapRelayScan.py -method LDAPS -dc-ip <DCIP> -u aaaa
+[Using the Name AAA is better the guest because guest gets locked out alot.]
+```
+
 # LDAP Relay Scan 
 A tool to check Domain Controllers for LDAP server protections regarding the relay of NTLM authentication. If you're interested in the specifics of the error-based enumeration, see [below](https://github.com/zyn3rgy/LdapRelayScan#error-based-enumeration-specifics). For details regarding what can be done when you identify a lack of LDAP protections, see the [references section](https://github.com/zyn3rgy/LdapRelayScan#references).
 ## Summary
@@ -70,18 +86,3 @@ A few invaluable resources for contextualization of this material and how it fit
  - [@skelsec](https://twitter.com/skelsec?lang=en) - [msldap](https://github.com/skelsec/msldap) w/ support for channel binding
 
 
-## Docker File:
-
-```
-docker build . -t ldaprealyscan
-```
-
-running
-```
-docker run -ti ldaprealayscan bash
-```
-once in the new shell
-```
-python3.9 LdapRelayScan.py -method LDAPS -dc-ip <DCIP> -u aaaa
-[Using the Name AAA is better the guest because guest gets locked out alot.]
-```
