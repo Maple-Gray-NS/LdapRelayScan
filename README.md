@@ -1,12 +1,12 @@
 ## Docker File:
 
 ```
-docker build . -t ldaprealyscan
+docker build . -t ldaprelayscan
 ```
 
 running
 ```
-docker run -ti ldaprealayscan bash
+docker run -ti ldaprelayscan bash
 ```
 once in the new shell
 ```
